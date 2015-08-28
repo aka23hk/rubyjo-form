@@ -7,20 +7,15 @@
 
 <body>
 	<div id="container">
-		<h1>確認画面</h1>
-		<p>入力フォームの内容が表示されます<br>
-			texttexttexttexttexttext<br>
-			texttexttexttexttexttext<br>
-			texttexttexttexttexttext<br>
-			texttexttexttexttexttext<br>
-			texttexttexttexttexttext<br>
-		</p>
+		<h1>確認</h1>
+		<p>メールアドレス: <%=@email%></p>
+		<p><%=@message%></p>
 		<p class="check">この内容でよろしいですか</p>
 		<div class="btn1 btn">
-			<a href="index.html">戻る</a>
+			<a href="/">戻る</a>
 		</div>
 		<div class="btn2 btn">
-			<a href="finish.html">送信</a>
+			<a href="finish">送信</a>
 		</div>
 	</div>
 </body>
