@@ -9,13 +9,17 @@
 	<div id="container">
 		<h1>確認</h1>
 		<p>メールアドレス: <%=@email%></p>
-		<p><%=@message%></p>
+		<p>お問い合わせ内容: <%=@message%></p>
 		<p class="check">この内容でよろしいですか</p>
 		<div class="btn1 btn">
 			<a href="/">戻る</a>
 		</div>
 		<div class="btn2 btn">
-			<a href="finish">送信</a>
+			<form action="send_mail" method="post">
+				<input type="submit" value="OK">
+				<input type="hidden" name="email" value="<%=@email%>">
+				<input type="hidden" name="message" value="<%=@message%>">
+			</form>
 		</div>
 	</div>
 </body>
