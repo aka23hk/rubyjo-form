@@ -9,8 +9,7 @@ Dotenv.load
 require 'yaml'
 require 'active_record'
 
-ActiveRecord::Base.configurations = YAML.load_file('database.yml')
-ActiveRecord::Base.establish_connection('development')
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgresql://@localhost:5432/my_db')
 
 class Mail < ActiveRecord::Base; end
  
