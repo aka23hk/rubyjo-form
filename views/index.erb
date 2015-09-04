@@ -14,6 +14,20 @@
 			<textarea name="message" cols="50" rows="10"></textarea>
 			<div class="btn">
 				<input type="submit" value="送信する">
+				<p>データベースの内容↓</p>
+				<!--パターン1-->
+				<p>
+					<%=@mail.email%>
+					<%=@mail.message%>
+				</p>
+				
+				<!--パターン2-->
+				<p>
+					<%=@email%>
+					<%=@message%>
+				</p>
+
+				<p><%=@count%></p>
 			</div>
 		</form>
 	</div>

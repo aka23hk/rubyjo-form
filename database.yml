@@ -1,0 +1,4 @@
+#database.yml
+development:
+  adapter: postgresql
+  database: my_db
