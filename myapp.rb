@@ -16,11 +16,6 @@ class Mail < ActiveRecord::Base; end
  
 get '/' do
 	@title = "入力フォーム"
-	@mail = Mail.find(6) #パターン1
-
-	@email = @mail.email #パターン2
-	@message = @mail.message 
-
 	@count = Mail.count
     erb :index
 end
